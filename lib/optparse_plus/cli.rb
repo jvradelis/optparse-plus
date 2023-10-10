@@ -17,7 +17,7 @@ module OptparsePlus
     #
     # This will exit the app if the dir exists and force is false
     def check_and_prepare_basedir!(basedir,force)
-      if File.exists? basedir
+      if File.exist? basedir
         if force
           rm_rf basedir, :verbose => true, :secure => true
         else
